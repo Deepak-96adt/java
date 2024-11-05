@@ -1,7 +1,7 @@
 public class CreationOfArray {
     public static void main(String[] args) {
         int arr[] = new int[5];  //fixed size
-        arr[0] = 7;
+        arr[0] = 711;
         arr[1] = 17;
         arr[2] = 71;
         arr[3] = 74;

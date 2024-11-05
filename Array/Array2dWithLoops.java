@@ -21,7 +21,7 @@ public class Array2dWithLoops {
 
         // Second type
         System.out.println();
-        System.out.println("for Each loop");
+        System.out.println("for Each loop start");
         for (int i[] : arr) {
             for(int j : i){
                 System.out.print(j+" ");

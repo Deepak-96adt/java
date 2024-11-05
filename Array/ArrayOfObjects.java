@@ -31,7 +31,7 @@ public class ArrayOfObjects {
         }
 
         System.out.println();
-        System.out.println("with for Each loop");
+        System.out.println("with for Each loop start");
         for (Employee value : employee) {
             System.out.println(value.eName+" : "+value.eRating);
         }
