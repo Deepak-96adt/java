@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/jdbc_ps_db","postgres","root");
+//        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/jdbc_ps_db","postgres","root");
+        Connection con = MyConnection.dbsConnect();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1 for insert , Enter 2 for fetch , Enter 3 for update , Enter 4 for delete , Enter 0 for exit");
@@ -12,7 +13,6 @@ public class Main {
         sc.nextLine();
 
         while (choice>0 && choice<5) {
-
             switch (choice){
                 case 1:{
                     System.out.print("Enter name : ");
