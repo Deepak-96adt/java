@@ -3,6 +3,7 @@ package com.map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Answer {
@@ -11,6 +12,9 @@ public class Answer {
 	private int ans_id;
 	@Column(name = "answer")
 	private String ans;
+	@OneToOne
+	@JoinColumn(name = "question_id")
+	private Question question;
 	
 	public Answer(int ans_id, String ans) {
 		super();

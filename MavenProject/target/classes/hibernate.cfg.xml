@@ -11,12 +11,17 @@
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
-		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="hibernate.show_sql">true</property>
+		<property name="format_sql">true</property>
 		<mapping class="com.tut.Student" />
 		<mapping class="com.tut.Address" />
-		<mapping class="com.map.Question" />
-		<mapping class="com.map.Answer" />
+		<mapping class="com.mappingOneToOne.Question" />
+		<mapping class="com.mappingOneToOne.Answer" />
+		<mapping class="com.mappingOneToMany.Question1" />
+		<mapping class="com.mappingOneToMany.Answer1" />
+		<mapping class="com.mappingManyToMany.Emp" />
+		<mapping class="com.mappingManyToMany.Project" />
 		<!-- Connection pooling with C3P0 (optional) -->
 		<!-- <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property> -->
 	</session-factory>
