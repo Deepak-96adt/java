@@ -20,6 +20,11 @@ public class Question1 {
 	@OneToMany(mappedBy = "question",fetch = FetchType.EAGER)
 	private List<Answer1> answers;	
 	
+//	@Override
+//	public String toString() {
+//		return "Question1 [qus_id=" + qus_id + ", qus=" + qus + ", answers=" + answers + "]";
+//	}
+
 	public List<Answer1> getAnswers() {
 		return answers;
 	}

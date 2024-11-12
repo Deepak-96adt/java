@@ -19,7 +19,7 @@ public class App
         SessionFactory factory=configuration.buildSessionFactory();
 //        System.out.println(sessionFactory);
         Student st = new Student();
-        st.setId(103);
+        st.setId(107);
         st.setName("user2");
         st.setCity("ujjain");
         System.out.println(st);
@@ -31,11 +31,11 @@ public class App
         ad.setOpen(true);
         ad.setStreet("56 dukan");
         
-        FileInputStream iFile = new FileInputStream("src/main/java/String methods.png");
-        byte[] data = new byte[iFile.available()];
-        iFile.read(data);
-        ad.setImage(data);
-        
+        try (FileInputStream iFile = new FileInputStream("src/main/java/String methods.png")) {
+			byte[] data = new byte[iFile.available()];
+			iFile.read(data);
+			ad.setImage(data);
+		}
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
         session.save(st);

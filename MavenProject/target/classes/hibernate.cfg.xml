@@ -14,6 +14,11 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="format_sql">true</property>
+		
+		<!-- For second level cache config -->
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property> 
+		
 		<mapping class="com.tut.Student" />
 		<mapping class="com.tut.Address" />
 		<mapping class="com.mappingOneToOne.Question" />
@@ -22,6 +27,7 @@
 		<mapping class="com.mappingOneToMany.Answer1" />
 		<mapping class="com.mappingManyToMany.Emp" />
 		<mapping class="com.mappingManyToMany.Project" />
+		<mapping resource="com/mapping/xml/Person.hbm.xml" />
 		<!-- Connection pooling with C3P0 (optional) -->
 		<!-- <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property> -->
 	</session-factory>
